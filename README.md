@@ -27,3 +27,21 @@ cd [partial path]
 cd ...
 * change to N level directory up
 
+examples
+========
+
+<code>
+~% cd src
+~/src% cd solutions/
+~/src/solutions% cd vmware/
+~/src/solutions/vmware% cd -l
+ 3  ~
+ 2  ~/src
+ 1  ~/src/solutions
+ 0  ~/src/solutions/vmware
+~/src/solutions/vmware% cd 2
+~/src% cd vm
+~/src/solutions/vmware% cd ....
+~%
+</code>
+
