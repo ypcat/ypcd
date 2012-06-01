@@ -4,6 +4,9 @@ import os, sys, re
 dirs = sys.stdin.read()[:-1].split('\n')
 path = os.path.expanduser((sys.argv+['~'])[1])
 
+if path == '-':
+    print '-'
+    sys.exit(0)
 if path == '-l':
     print>>sys.stderr, '\n'.join(reversed(dirs))
     sys.exit(1)
