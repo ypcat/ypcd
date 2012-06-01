@@ -2,7 +2,7 @@
 
 import os, sys, re
 dirs = sys.stdin.read()[:-1].split('\n')
-path = os.path.expanduser((sys.argv+['~'])[1])
+path = os.path.expanduser(sys.argv[1] or '~')
 
 if path == '-':
     print '-'
