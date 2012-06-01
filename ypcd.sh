@@ -15,8 +15,8 @@
 # ~%
 
 ypcd () {
-    path=`dirs -v | ypcd.py $1`
-    [[ $? -eq 0 ]] && pushd $path > /dev/null
+    path=`dirs -v | ypcd.py "$1"`
+    [[ $? -eq 0 ]] && pushd "$path" > /dev/null
     for i in `dirs -v | ypcd.py -d`; do
         popd -n +$i 2>/dev/null 1>/dev/null
     done
